@@ -11,6 +11,7 @@ import CoreData
 
 class CoreDataStack {
     
+    /*
     // Create place to store data
     private(set) lazy var applicationDocumentsDirectory: URL = {
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -37,12 +38,29 @@ class CoreDataStack {
         
         return coordinator
     }()
+     */
     
     lazy var managedObjectContext: NSManagedObjectContext = {
-       let coordinator = self.persistantStoreCoordinator
+       /*
+        let coordinator = self.persistantStoreCoordinator
         let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         moc.persistentStoreCoordinator = coordinator
         
         return moc
+         */
+        
+        let container = self.persistentContainer
+        return container.viewContext
+    }()
+    
+    private lazy var persistentContainer: NSPersistentContainer = {
+       let container = NSPersistentContainer(name: "Task-Manager")
+        container.loadPersistentStores() { storeDescription, error in
+            if let error = error as NSError? {
+                fatalError("Unresolved error: \(error), \(error.userInfo)")
+            }
+        }
+        
+        return container
     }()
 }
