@@ -37,4 +37,12 @@ class CoreDataStack {
         
         return coordinator
     }()
+    
+    lazy var managedObjectContext: NSManagedObjectContext = {
+       let coordinator = self.persistantStoreCoordinator
+        let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        moc.persistentStoreCoordinator = coordinator
+        
+        return moc
+    }()
 }
