@@ -22,4 +22,19 @@ class CoreDataStack {
         let modelUrl = Bundle.main.url(forResource: "Task-Manager", withExtension: "momd")!
         return NSManagedObjectModel(contentsOf: modelUrl)!
     }()
+    
+    private(set) lazy var persistantStoreCoordinator: NSPersistentStoreCoordinator = {
+        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
+        let url = self.applicationDocumentsDirectory.appendingPathComponent("Task-Manager.sqlite")
+        
+        do {
+            try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url)
+        }
+        catch {
+            print(error)
+            abort()
+        }
+        
+        return coordinator
+    }()
 }
