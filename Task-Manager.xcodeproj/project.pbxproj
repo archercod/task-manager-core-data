@@ -15,6 +15,8 @@
 		EAEE6CC21F817CA1000AAA2B /* Task-Manager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAEE6CC01F817CA1000AAA2B /* Task-Manager.xcdatamodeld */; };
 		EAEE6CC41F817E8D000AAA2B /* TaskManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE6CC31F817E8D000AAA2B /* TaskManagerViewController.swift */; };
 		EAEE6CC61F817F4E000AAA2B /* NewTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE6CC51F817F4E000AAA2B /* NewTaskController.swift */; };
+		EAEE6CC91F818081000AAA2B /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE6CC71F818081000AAA2B /* Item+CoreDataClass.swift */; };
+		EAEE6CCA1F818081000AAA2B /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE6CC81F818081000AAA2B /* Item+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		EAEE6CC11F817CA1000AAA2B /* Task-Manager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Task-Manager.xcdatamodel"; sourceTree = "<group>"; };
 		EAEE6CC31F817E8D000AAA2B /* TaskManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerViewController.swift; sourceTree = "<group>"; };
 		EAEE6CC51F817F4E000AAA2B /* NewTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskController.swift; sourceTree = "<group>"; };
+		EAEE6CC71F818081000AAA2B /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EAEE6CC81F818081000AAA2B /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				EAEE6CC01F817CA1000AAA2B /* Task-Manager.xcdatamodeld */,
 				EAEE6CC31F817E8D000AAA2B /* TaskManagerViewController.swift */,
 				EAEE6CC51F817F4E000AAA2B /* NewTaskController.swift */,
+				EAEE6CC71F818081000AAA2B /* Item+CoreDataClass.swift */,
+				EAEE6CC81F818081000AAA2B /* Item+CoreDataProperties.swift */,
 			);
 			path = "Task-Manager";
 			sourceTree = "<group>";
@@ -145,6 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAEE6CCA1F818081000AAA2B /* Item+CoreDataProperties.swift in Sources */,
+				EAEE6CC91F818081000AAA2B /* Item+CoreDataClass.swift in Sources */,
 				EAEE6CC21F817CA1000AAA2B /* Task-Manager.xcdatamodeld in Sources */,
 				EAEE6CBF1F7EF176000AAA2B /* CoreDataStack.swift in Sources */,
 				EAEE6CC41F817E8D000AAA2B /* TaskManagerViewController.swift in Sources */,
