@@ -13,6 +13,7 @@
 		EAEE6CB41F7EF0D4000AAA2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAEE6CB31F7EF0D4000AAA2B /* Assets.xcassets */; };
 		EAEE6CB71F7EF0D4000AAA2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAEE6CB51F7EF0D4000AAA2B /* LaunchScreen.storyboard */; };
 		EAEE6CBF1F7EF176000AAA2B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE6CBE1F7EF176000AAA2B /* CoreDataStack.swift */; };
+		EAEE6CC21F817CA1000AAA2B /* Task-Manager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAEE6CC01F817CA1000AAA2B /* Task-Manager.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EAEE6CB61F7EF0D4000AAA2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAEE6CB81F7EF0D4000AAA2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAEE6CBE1F7EF176000AAA2B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		EAEE6CC11F817CA1000AAA2B /* Task-Manager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Task-Manager.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				EAEE6CB51F7EF0D4000AAA2B /* LaunchScreen.storyboard */,
 				EAEE6CB81F7EF0D4000AAA2B /* Info.plist */,
 				EAEE6CBE1F7EF176000AAA2B /* CoreDataStack.swift */,
+				EAEE6CC01F817CA1000AAA2B /* Task-Manager.xcdatamodeld */,
 			);
 			path = "Task-Manager";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAEE6CC21F817CA1000AAA2B /* Task-Manager.xcdatamodeld in Sources */,
 				EAEE6CBF1F7EF176000AAA2B /* CoreDataStack.swift in Sources */,
 				EAEE6CAF1F7EF0D4000AAA2B /* ViewController.swift in Sources */,
 				EAEE6CAD1F7EF0D4000AAA2B /* AppDelegate.swift in Sources */,
@@ -326,6 +330,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EAEE6CC01F817CA1000AAA2B /* Task-Manager.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EAEE6CC11F817CA1000AAA2B /* Task-Manager.xcdatamodel */,
+			);
+			currentVersion = EAEE6CC11F817CA1000AAA2B /* Task-Manager.xcdatamodel */;
+			path = "Task-Manager.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EAEE6CA11F7EF0D4000AAA2B /* Project object */;
 }
