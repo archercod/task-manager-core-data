@@ -22,6 +22,8 @@ class TaskManagerViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fetchedResultsController.delegate = self
+        
         do {
             try fetchedResultsController.performFetch()
         }
@@ -54,7 +56,21 @@ class TaskManagerViewController: UITableViewController {
         return cell
     }
     
-
+    // MARK: Navigation
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "newItem" {
+            let navigationController = segue.destination as! UINavigationController
+            let NewTaskController = navigationController.topViewController as! NewTaskController
+            
+            NewTaskController.managedObjectContext = self.managedObjectContext
+        }
+    }
 
+}
+
+extension TaskManagerViewController: NSFetchedResultsControllerDelegate {
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.reloadData()
+    }
 }
