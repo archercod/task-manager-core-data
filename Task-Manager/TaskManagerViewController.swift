@@ -13,23 +13,13 @@ class TaskManagerViewController: UITableViewController {
     
     let managedObjectContext = CoreDataStack().managedObjectContext
     
-    lazy var fetchedResultsController: NSFetchedResultsController<Item> = {
-        let request: NSFetchRequest<Item> = Item.fetchRequest()
-        let controller = NSFetchedResultsController(fetchRequest: request, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
-        return controller
+    lazy var fetchedResultsController: TaskManagerFetchedResultsController = {
+        return TaskManagerFetchedResultsController(managedObjectContext: self.managedObjectContext, tableView: self.tableView)
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchedResultsController.delegate = self
-        
-        do {
-            try fetchedResultsController.performFetch()
-        }
-        catch {
-            print("Error fetching Item objects: \(error.localizedDescription)")
-        }
     }
 
     // MARK: - Table view data source
@@ -69,8 +59,3 @@ class TaskManagerViewController: UITableViewController {
 
 }
 
-extension TaskManagerViewController: NSFetchedResultsControllerDelegate {
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        tableView.reloadData()
-    }
-}
