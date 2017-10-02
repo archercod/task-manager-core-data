@@ -34,6 +34,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="w8V-Kf-zf2" kind="show" identifier="showDetails" id="8sh-AM-bEi"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -131,6 +134,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRa-EE-y5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1838.4000000000001" y="115.14242878560721"/>
+        </scene>
+        <!--Show Details View Controller-->
+        <scene sceneID="Q15-Ck-Axg">
+            <objects>
+                <viewController id="QdU-on-y1b" customClass="ShowDetailsViewController" customModule="Task_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N10-QL-HAq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oPH-WV-MdN">
+                                <rect key="frame" x="16" y="318.5" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5R-4S-adV">
+                                <rect key="frame" x="0.0" y="611" width="375" height="56"/>
+                                <color key="backgroundColor" red="1" green="0.23081074879928998" blue="0.22086326849985238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="7uz-bS-6Dd"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteDetail:" destination="QdU-on-y1b" eventType="touchUpInside" id="8U2-Ww-mQB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oPH-WV-MdN" firstAttribute="leading" secondItem="A4k-im-VDq" secondAttribute="leading" constant="16" id="1FO-M7-t0e"/>
+                            <constraint firstItem="A4k-im-VDq" firstAttribute="trailing" secondItem="X5R-4S-adV" secondAttribute="trailing" id="1mt-sh-FW9"/>
+                            <constraint firstItem="X5R-4S-adV" firstAttribute="leading" secondItem="A4k-im-VDq" secondAttribute="leading" id="Ip6-j1-0Yh"/>
+                            <constraint firstItem="A4k-im-VDq" firstAttribute="trailing" secondItem="oPH-WV-MdN" secondAttribute="trailing" constant="16" id="UqY-fD-8X1"/>
+                            <constraint firstItem="oPH-WV-MdN" firstAttribute="centerY" secondItem="N10-QL-HAq" secondAttribute="centerY" id="ifq-DS-WdL"/>
+                            <constraint firstItem="X5R-4S-adV" firstAttribute="bottom" secondItem="A4k-im-VDq" secondAttribute="bottom" id="pqT-sw-isy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A4k-im-VDq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lzt-ea-heM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Nsl-tM-xHq">
+                            <connections>
+                                <action selector="save:" destination="QdU-on-y1b" id="x3n-pP-Fcc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="detailsTextField" destination="oPH-WV-MdN" id="aiD-EW-DFW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j7a-XZ-5ON" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2084" y="887"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RRZ-Eg-iTZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w8V-Kf-zf2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lh9-hG-fJR">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QdU-on-y1b" kind="relationship" relationship="rootViewController" id="4QJ-h3-HaD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JOU-8w-iAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1345" y="887"/>
         </scene>
     </scenes>
 </document>

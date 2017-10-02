@@ -18,6 +18,7 @@
 		EAEE6CC91F818081000AAA2B /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE6CC71F818081000AAA2B /* Item+CoreDataClass.swift */; };
 		EAEE6CCA1F818081000AAA2B /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE6CC81F818081000AAA2B /* Item+CoreDataProperties.swift */; };
 		EAEE6CCC1F818FF8000AAA2B /* TaskManagerFetchedResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE6CCB1F818FF8000AAA2B /* TaskManagerFetchedResultsController.swift */; };
+		EAEE6CCE1F822F47000AAA2B /* ShowDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE6CCD1F822F47000AAA2B /* ShowDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		EAEE6CC71F818081000AAA2B /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
 		EAEE6CC81F818081000AAA2B /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		EAEE6CCB1F818FF8000AAA2B /* TaskManagerFetchedResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerFetchedResultsController.swift; sourceTree = "<group>"; };
+		EAEE6CCD1F822F47000AAA2B /* ShowDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				EAEE6CC71F818081000AAA2B /* Item+CoreDataClass.swift */,
 				EAEE6CC81F818081000AAA2B /* Item+CoreDataProperties.swift */,
 				EAEE6CCB1F818FF8000AAA2B /* TaskManagerFetchedResultsController.swift */,
+				EAEE6CCD1F822F47000AAA2B /* ShowDetailsViewController.swift */,
 			);
 			path = "Task-Manager";
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				EAEE6CBF1F7EF176000AAA2B /* CoreDataStack.swift in Sources */,
 				EAEE6CC41F817E8D000AAA2B /* TaskManagerViewController.swift in Sources */,
 				EAEE6CC61F817F4E000AAA2B /* NewTaskController.swift in Sources */,
+				EAEE6CCE1F822F47000AAA2B /* ShowDetailsViewController.swift in Sources */,
 				EAEE6CAD1F7EF0D4000AAA2B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

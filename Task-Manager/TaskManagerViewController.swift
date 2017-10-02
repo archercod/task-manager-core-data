@@ -65,7 +65,15 @@ class TaskManagerViewController: UITableViewController {
             let NewTaskController = navigationController.topViewController as! NewTaskController
             
             NewTaskController.managedObjectContext = self.managedObjectContext
+        } else if segue.identifier == "showDetails" {
+            guard let showDetailsVC = (segue.destination as! UINavigationController).topViewController as? ShowDetailsViewController, let indexPath = tableView.indexPathsForSelectedRows else { return }
+            
+            let item = fetchedResultsController.object(at: indexPath)
+            ShowDetailsViewController.item = item
+            ShowDetailsViewController.context = self.managedObjectContext
         }
+        
+        
     }
 
 }
